@@ -141,7 +141,7 @@ function es_action() {
             ES_PID=$(check_esrun)
             if [[ -n $ES_PID ]]; then
                 touch /tmp/es-sysrestart
-                chown pi:pi /tmp/es-sysrestart
+                chown retropie:retropie /tmp/es-sysrestart
                 kill $ES_PID
                 wait_forpid $ES_PID
                 exit
@@ -153,7 +153,7 @@ function es_action() {
             ES_PID=$(check_esrun)
             if [[ -n $ES_PID ]]; then
                 touch /tmp/es-shutdown
-                chown pi:pi /tmp/es-shutdown
+                chown retropie:retropie /tmp/es-shutdown
                 kill $ES_PID
                 wait_forpid $ES_PID
                 exit
@@ -165,7 +165,7 @@ function es_action() {
             ES_PID=$(check_esrun)
             if [[ -n $ES_PID ]]; then
                 touch /tmp/es-restart
-                chown pi:pi /tmp/es-restart
+                chown retropie:retropie /tmp/es-restart
                 kill $ES_PID
                 wait_forpid $ES_PID
             fi
